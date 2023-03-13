@@ -1,7 +1,7 @@
 // Підключаємо повідомлення
 import { Notify } from 'notiflix';
 
-refs = {
+const refs = {
   form: document.querySelector('.form'),
 }
 
@@ -10,9 +10,9 @@ refs.form.addEventListener('submit', onFormSubmit);
 function onFormSubmit(e) {
   e.preventDefault();
 
-  delay = Number.parseInt(e.currentTarget.elements.delay.value);
-  step = Number.parseInt(e.currentTarget.elements.step.value);
-  amount = Number.parseInt(e.currentTarget.elements.amount.value);
+  let delay = Number.parseInt(e.currentTarget.elements.delay.value);
+  const step = Number.parseInt(e.currentTarget.elements.step.value);
+  const amount = Number.parseInt(e.currentTarget.elements.amount.value);
 
   for (let position = 1; position <= amount; position += 1) {
     createPromise(position, delay).then(({ position, delay }) => {

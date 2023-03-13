@@ -38,10 +38,10 @@ const options = {
 
             timerId = setInterval(() => {
                 // Поточна дата
-                dateNow = new Date(); 
+                const dateNow = new Date(); 
 
                 // Різниця між вибраною і поточною датою
-                diffDates = dateSelected - dateNow;
+                const diffDates = dateSelected - dateNow;
 
                 // Скільки залишилось до вибраної дати
                 const remainder = convertMs(diffDates);
